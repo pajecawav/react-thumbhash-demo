@@ -32,20 +32,14 @@ export const Image = ({ src, hash, width, height }: ImageProps) => {
 
 	return (
 		<div className={styles.container}>
-			{shouldShowThumbnail && (
-				<img
-					className={styles.image}
-					src={thumbhashSrc}
-					width={width}
-					height={height}
-					aria-hidden
-				/>
-			)}
 			<img
 				className={styles.image}
 				src={src}
 				width={width}
 				height={height}
+				style={{
+					backgroundImage: shouldShowThumbnail ? `url(${thumbhashSrc})` : undefined,
+				}}
 				onLoad={() => setIsLoaded(true)}
 			/>
 		</div>
