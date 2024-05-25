@@ -1,0 +1,14 @@
+.container {
+	display: grid;
+	width: 700px;
+}
+
+.container > * {
+	grid-area: 1/1;
+}
+
+.image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
